@@ -16,36 +16,44 @@ if errorlevel 1 set "FAILED=1"
 where jpackage
 if errorlevel 1 set "FAILED=1"
 
+set "JAVAC_VERSION="
 for /f "tokens=2" %%V in ('javac -version 2^>^&1') do set "JAVAC_VERSION=%%V"
+
 echo %JAVAC_VERSION% | findstr /B /C:"21." >nul
-if errorlevel 1 (
-  echo FAIL: el javac activo no es JDK 21.
-  set "FAILED=1"
-) else (
-  echo PASS: JDK 21 activo para packaging.
-)
+if errorlevel 1 goto :jdk_fail
 
+echo PASS: JDK 21 activo para packaging.
+goto :check_wix
+
+:jdk_fail
+echo FAIL: el javac activo no es JDK 21.
+set "FAILED=1"
+
+:check_wix
 call "%ROOT%\scripts\_resolve-wix.bat"
-if errorlevel 1 (
-  echo FAIL: no se encontro WiX Toolset 3 compatible.
-  echo Rutas comprobadas:
-  echo   PATH
-  echo   %%WIX%%\bin
-  echo   %%ProgramFiles(x86)%%\WiX Toolset v3.14\bin
-  echo   %%ProgramFiles(x86)%%\WiX Toolset v3.11\bin
-  set "FAILED=1"
-) else (
-  echo PASS: WiX detectado en "%WIX_BIN%".
-  where candle.exe
-  where light.exe
-)
+if errorlevel 1 goto :wix_fail
 
+echo PASS: WiX detectado en "%WIX_BIN%".
+where candle.exe
+where light.exe
+goto :finish
+
+:wix_fail
+echo FAIL: no se encontro WiX Toolset 3 compatible.
+echo Rutas comprobadas:
+echo   PATH
+echo   variable WIX
+echo   directorios estandar de WiX Toolset 3.14 y 3.11
+set "FAILED=1"
+
+:finish
 echo.
-if "%FAILED%"=="0" (
-  echo RESULTADO: PASS
-) else (
-  echo RESULTADO: FAIL
-  echo Consulta packaging\README.md y docs\BUILD-ONBOARDING.md.
-)
+if "%FAILED%"=="0" goto :pass
 
-exit /b %FAILED%
+echo RESULTADO: FAIL
+echo Consulta packaging\README.md y docs\BUILD-ONBOARDING.md.
+exit /b 1
+
+:pass
+echo RESULTADO: PASS
+exit /b 0

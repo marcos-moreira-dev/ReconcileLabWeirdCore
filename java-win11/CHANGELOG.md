@@ -2,6 +2,8 @@
 
 ## 0.7.5 — 2026-09-03 — Canvas sin avisos superpuestos
 
+- Se corrige la autodetección de WiX en Windows cuando `cmd.exe` interpreta rutas con `ProgramFiles(x86)` dentro de bloques parentizados.
+- El gate `verify-installer-prereqs.bat` evita ahora construcciones frágiles del parser de batch y conserva `WIX_BIN`/`PATH` tras el helper.
 - Se elimina por completo el toast de límite de traza.
 - El canvas queda reservado a estados, conexiones, pan, zoom y selección.
 - La diferencia entre búsqueda lógica y traza retenida se comunica únicamente

@@ -1,42 +1,51 @@
 @echo off
 rem Helper interno. Debe invocarse con CALL para conservar WIX_BIN y PATH.
+setlocal EnableExtensions
+
 set "WIX_BIN="
+set "PROGRAM_FILES_X86=%ProgramFiles(x86)%"
+set "PROGRAM_FILES=%ProgramFiles%"
 
-where candle.exe >nul 2>nul
-if not errorlevel 1 (
-  where light.exe >nul 2>nul
-  if not errorlevel 1 (
-    for /f "delims=" %%I in ('where candle.exe') do (
-      if not defined WIX_BIN set "WIX_BIN=%%~dpI"
-    )
-    goto :found
-  )
+rem 1. Preferir una instalacion ya disponible en PATH.
+for /f "delims=" %%I in ('where candle.exe 2^>nul') do (
+  if not defined WIX_BIN set "WIX_BIN=%%~dpI"
 )
 
-if defined WIX (
-  if exist "%WIX%\bin\candle.exe" if exist "%WIX%\bin\light.exe" (
-    set "WIX_BIN=%WIX%\bin"
-    goto :append
-  )
+if defined WIX_BIN (
+  if exist "%WIX_BIN%light.exe" goto :publish
+  set "WIX_BIN="
 )
 
-for %%D in (
-  "%ProgramFiles(x86)%\WiX Toolset v3.14\bin"
-  "%ProgramFiles(x86)%\WiX Toolset v3.11\bin"
-  "%ProgramFiles%\WiX Toolset v3.14\bin"
-  "%ProgramFiles%\WiX Toolset v3.11\bin"
-) do (
-  if exist "%%~D\candle.exe" if exist "%%~D\light.exe" (
-    set "WIX_BIN=%%~D"
-    goto :append
-  )
-)
+rem 2. Variable WIX, cuando el instalador la haya configurado.
+if defined WIX call :probe "%WIX%\bin"
+if defined WIX_BIN goto :append
 
+rem 3. Rutas estandar conocidas.
+call :probe "%PROGRAM_FILES_X86%\WiX Toolset v3.14\bin"
+if defined WIX_BIN goto :append
+
+call :probe "%PROGRAM_FILES_X86%\WiX Toolset v3.11\bin"
+if defined WIX_BIN goto :append
+
+call :probe "%PROGRAM_FILES%\WiX Toolset v3.14\bin"
+if defined WIX_BIN goto :append
+
+call :probe "%PROGRAM_FILES%\WiX Toolset v3.11\bin"
+if defined WIX_BIN goto :append
+
+endlocal
 exit /b 1
 
-:append
-echo;%PATH%; | find /I ";%WIX_BIN%;" >nul
-if errorlevel 1 set "PATH=%WIX_BIN%;%PATH%"
+:probe
+if "%~1"=="" exit /b 0
+if not exist "%~1\candle.exe" exit /b 0
+if not exist "%~1\light.exe" exit /b 0
+set "WIX_BIN=%~1"
+exit /b 0
 
-:found
+:append
+set "PATH=%WIX_BIN%;%PATH%"
+
+:publish
+endlocal & set "WIX_BIN=%WIX_BIN%" & set "PATH=%PATH%"
 exit /b 0
