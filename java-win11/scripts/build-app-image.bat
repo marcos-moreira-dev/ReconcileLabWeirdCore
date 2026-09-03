@@ -4,7 +4,7 @@ setlocal EnableExtensions
 set "ROOT=%~dp0.."
 set "INPUT=%ROOT%\target\jpackage-input"
 set "DEST=%ROOT%\target\app-image"
-set "APPJAR=reconcilelab-java-win11-0.7.5-SNAPSHOT.jar"
+set "APPJAR=reconcilelab-java-win11-0.7.5.jar"
 set "MAIN_CLASS=com.marcosmoreiradev.reconcilelab.app.Launcher"
 set "ICON=%ROOT%\..\assets\branding\reconcilelab.ico"
 

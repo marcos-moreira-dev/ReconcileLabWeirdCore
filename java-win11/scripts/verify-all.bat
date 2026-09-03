@@ -7,7 +7,7 @@ set "FAILED=0"
 set "COMPILE_OK=0"
 set "TESTS_OK=0"
 set "PACKAGE_OK=0"
-set "APPJAR=%ROOT%\target\reconcilelab-java-win11-0.7.5-SNAPSHOT.jar"
+set "APPJAR=%ROOT%\target\reconcilelab-java-win11-0.7.5.jar"
 set "MAIN_CLASS=com.marcosmoreiradev.reconcilelab.app.Launcher"
 
 if not exist "%ROOT%\.local" mkdir "%ROOT%\.local"

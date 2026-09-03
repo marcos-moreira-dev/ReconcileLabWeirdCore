@@ -6,7 +6,7 @@ Identidad canónica de esta edición:
 Vendor:      Marcos Moreira Dev
 GroupId:     com.marcosmoreiradev
 Package:     com.marcosmoreiradev.reconcilelab
-Versión:     0.7.5-SNAPSHOT
+Versión:     0.7.5
 Upgrade UUID: dfeca1bd-c205-5e23-8e33-74ca121367d1
 ```
 
@@ -82,6 +82,24 @@ build-app-image
 Si ambos pasan, la aplicación, tests, JAR y distribución autocontenida están
 listas para QA. El instalador sigue siendo un gate separado porque añade WiX y
 la instalación del sistema operativo a la ecuación.
+
+## Gate final de release
+
+Para una publicación formal se recomienda ejecutar:
+
+```bat
+scripts\release-final.bat
+```
+
+Este gate encadena verificación del producto, app-image, smoke con runtime
+embebido, prerrequisitos WiX, creación del instalador y generación del SHA-256.
+
+Produce los artefactos canónicos:
+
+```text
+target\installer\ReconcileLab-Java-Windows11-Setup-0.7.5.exe
+target\installer\ReconcileLab-Java-Windows11-Setup-0.7.5.sha256
+```
 
 ## Gate final de instalador
 

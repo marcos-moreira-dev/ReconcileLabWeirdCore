@@ -9,7 +9,7 @@ package com.marcosmoreiradev.reconcilelab.app;
  */
 public final class BuildInfo {
 
-    public static final String FALLBACK_VERSION = "0.7.5-dev";
+    public static final String FALLBACK_VERSION = "0.7.5";
 
     private BuildInfo() {
     }

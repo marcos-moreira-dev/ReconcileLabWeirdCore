@@ -36,5 +36,5 @@ echo RELEASE CHECK: PASS
 echo Compilacion, tests, calidad, Javadoc y app-image autocontenida verificados.
 echo La app-image ejecuto su launcher con el runtime embebido.
 echo Evidencia: %ROOT%\.local\release-evidence.txt
-echo El instalador EXE sigue siendo un gate posterior porque requiere WiX.
+echo Para cerrar una release publica ejecuta scripts\release-final.bat.
 exit /b 0

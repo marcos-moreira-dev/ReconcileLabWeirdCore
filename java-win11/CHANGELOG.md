@@ -1,6 +1,6 @@
 # Changelog — ReconcileLab Java Edition
 
-## 0.7.5-SNAPSHOT — Canvas sin avisos superpuestos
+## 0.7.5 — 2026-09-03 — Canvas sin avisos superpuestos
 
 - Se elimina por completo el toast de límite de traza.
 - El canvas queda reservado a estados, conexiones, pan, zoom y selección.

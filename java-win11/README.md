@@ -24,8 +24,16 @@ La primera ejecución abre maximizada y luego conserva el estado de ventana.
 
 ## Release local
 
+Gate de ingeniería:
+
 ```bat
 scripts\release-check.bat
+```
+
+Gate de publicación estable, incluido instalador + SHA-256:
+
+```bat
+scripts\release-final.bat
 ```
 
 Javadoc manual:
@@ -47,7 +55,7 @@ scripts\generate-javadoc.bat
 
 ## Estado de la rama
 
-`0.7.5-SNAPSHOT` representa la edición moderna actualmente validada en Windows
+`0.7.5` es la edición moderna promovida para release estable en Windows
 11. Conserva la gramática espacial de la edición XP y añade HUD de zoom,
 timeline redimensionable, controles refinados e iconografía vectorial propia.
 

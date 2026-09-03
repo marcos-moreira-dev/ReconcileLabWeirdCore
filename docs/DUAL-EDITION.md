@@ -49,14 +49,9 @@ cambiar el producto en otra cosa.
 La edición C++ `0.5.11` es la referencia retro ya validada visualmente en
 Windows XP SP3 x86.
 
-La edición Java `0.7.1-SNAPSHOT` está validada visualmente en Windows 11 con
-Eclipse Temurin 21. Ya cuenta con compilación JavaFX, tests, JAR, HUD de zoom,
-timeline inferior redimensionable, ayuda integrada, exportación, Checkstyle,
-Javadoc, JaCoCo y preparación de app-image mediante `jpackage`.
+La edición Java `0.7.5` es la release moderna estable para Windows 11. Usa Eclipse Temurin 21 y JavaFX 21, conserva la gramática espacial de la edición XP y dispone de build reproducible, tests, Javadoc, Checkstyle, JaCoCo, app-image autocontenida y packaging EXE mediante `jpackage` + WiX.
 
-El gate pendiente para cerrar la entrega moderna es producir y probar el
-instalador de Windows 11, incluyendo instalación, ejecución, asociación `.case`,
-actualización y desinstalación.
+El instalador y su SHA-256 se publican como assets de GitHub Releases; el árbol Git conserva únicamente fuentes, documentación y configuración de build.
 
 ## Identidad de la edición Java
 

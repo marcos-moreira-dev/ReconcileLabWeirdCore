@@ -218,13 +218,9 @@ espacial, mientras cada toolkit conserva su propia época.
 
 **C++ / Windows XP:** `0.5.11` — edición retro validada visualmente en Windows XP.
 
-**Java / Windows 11:** `0.7.1-SNAPSHOT` — edición moderna validada
-visualmente en Windows 11 con Temurin 21; incluye HUD de zoom sobre el canvas,
-timeline inferior redimensionable, ayuda integrada, pruebas, Javadoc,
-Checkstyle, JaCoCo y preparación de distribución con `jpackage`.
+**Java / Windows 11:** `0.7.5` — edición moderna promovida como release estable; validada en Windows 11 con Temurin 21 y preparada para distribución autocontenida mediante `jpackage` + WiX. Incluye HUD de zoom, timeline redimensionable, exportación PNG adaptativa, ayuda integrada, JUnit, Checkstyle, JaCoCo y Javadoc.
 
-El siguiente gate de entrega es cerrar la app-image/instalador de Windows 11 y
-su instalación/desinstalación real.
+Los binarios de Windows 11 se publican como assets de GitHub Releases; `target/` permanece fuera del repositorio.
 
 ## Licencia
 

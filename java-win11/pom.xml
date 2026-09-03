@@ -5,7 +5,7 @@
 
     <groupId>com.marcosmoreiradev</groupId>
     <artifactId>reconcilelab-java-win11</artifactId>
-    <version>0.7.5-SNAPSHOT</version>
+    <version>0.7.5</version>
     <name>ReconcileLab Java Edition for Windows 11</name>
     <description>Implementación Java 21 / JavaFX de ReconcileLab para Windows 11.</description>
 

@@ -4,7 +4,7 @@ setlocal EnableExtensions
 set "ROOT=%~dp0.."
 set "APPROOT=%ROOT%\target\app-image\ReconcileLab"
 set "EXE=%APPROOT%\ReconcileLab.exe"
-set "APPJAR=%APPROOT%\app\reconcilelab-java-win11-0.7.5-SNAPSHOT.jar"
+set "APPJAR=%APPROOT%\app\reconcilelab-java-win11-0.7.5.jar"
 set "CONFIG=%APPROOT%\app\ReconcileLab.cfg"
 set "JVM=%APPROOT%\runtime\bin\server\jvm.dll"
 set "SMOKE=%ROOT%\.local\app-image-smoke.txt"
