@@ -1,0 +1,5 @@
+name=Recorrido horizontal compacto
+description=Caso pequeno con pocas capas y muchas alternativas en las ultimas filas, pensado para practicar paneo horizontal y zoom.
+target=3800
+objective=all
+values=800,1000,1200,1400,1600,1800

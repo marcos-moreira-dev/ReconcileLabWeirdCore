@@ -1,0 +1,5 @@
+name=Demostracion de descarte seguro
+description=Los montos positivos permiten observar como se descartan rutas que ya no pueden servir.
+target=28740
+objective=all
+values=3200,1850,4700,6600,2490,8150,1250,3900,5600,7250,910,1430

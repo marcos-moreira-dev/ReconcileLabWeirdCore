@@ -1,0 +1,13 @@
+bin/
+.local/*
+!.local/README.txt
+*.exe
+*.o
+*.obj
+Thumbs.db
+Desktop.ini
+java-win11/target/
+java-win11/.local/*
+!java-win11/.local/README.txt
+java-win11/.idea/
+java-win11/*.iml

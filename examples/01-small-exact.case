@@ -1,0 +1,6 @@
+# Los valores se almacenan como centavos enteros.
+name=Coincidencia exacta pequena
+description=Un deposito pequeno con una combinacion compatible clara.
+target=16350
+objective=first
+values=3200,1850,4700,6600,2490,8150

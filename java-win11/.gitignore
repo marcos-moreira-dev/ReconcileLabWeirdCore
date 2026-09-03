@@ -1,0 +1,12 @@
+target/
+.local/*
+!.local/README.txt
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+*.log
+hs_err_pid*.log
+replay_pid*.log
+*.hprof

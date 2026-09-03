@@ -1,0 +1,35 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Lienzo de trabajo</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<h1>Leer el lienzo de trabajo</h1>
+
+<p>El lienzo central muestra cómo se está examinando el caso de conciliación. Cada tarjeta representa una parte de la búsqueda de una combinación compatible; no representa por sí sola un movimiento bancario.</p>
+
+<div class="figure">
+<img src="images/lectura-lienzo.png">
+<p class="caption">Las tarjetas cambian de significado según el resultado de esa ruta.</p>
+</div>
+
+<p><b>Compatible</b> significa que los montos acumulados en esa ruta igualan el monto a conciliar.</p>
+<p><b>Descartado</b> significa que esa ruta ya no necesita examinarse bajo las condiciones actuales.</p>
+<p><b>Procesado</b> significa que esa parte del trabajo fue examinada.</p>
+
+<p>El lienzo puede ser mucho mayor que la ventana. Usa las barras horizontal y vertical, o mantén pulsado el botón central del ratón y arrastra para panear.</p>
+
+<p>El control <b>Zoom</b> vive en una franja fija a la derecha del lienzo. Panear o mover las barras de desplazamiento no cambia su posición. Permite alejarse para comprender la forma general o acercarse para leer tarjetas individuales.</p>
+
+<h2>Línea de tiempo</h2>
+<p>Conserva momentos significativos, como el inicio, algunos descartes, combinaciones compatibles y la finalización. No es una grabación completa de cada cálculo.</p>
+
+<h2>Tasa observada</h2>
+<p>Es una indicación operacional de estados procesados por segundo. No es un benchmark formal: puede cambiar por el modo de ejecución, la frecuencia visual, la máquina virtual y otras tareas del equipo.</p>
+
+<h2>Espacio de búsqueda contabilizado</h2>
+<p>La barra resume cuánto trabajo potencial fue examinado o pudo evitarse de forma segura. Si el objetivo es detenerse en la primera coincidencia, la ejecución puede terminar antes del 100% porque el resto ya no era necesario para ese objetivo.</p>
+
+<h2>Casos grandes</h2>
+<p>Una conciliación grande puede implicar mucho más trabajo del que tiene sentido dibujar. ReconcileLab puede seguir procesando estados sin crear una tarjeta detallada para cada uno. El resumen conserva las cifras globales.</p>
+
+<p><a href="index.html">Volver al contenido</a></p>
+<h2>Ir directamente a una coincidencia</h2>
+<p>El control <b>Estados de búsqueda compatibles</b>, situado junto a la actualización visual, reúne las coincidencias que todavía están disponibles en la vista detallada. Al elegir una, el lienzo se desplaza automáticamente hasta su tarjeta y la selecciona. Si no se ha encontrado ninguna, el control lo indica y permanece deshabilitado.</p>
+</body></html>

@@ -1,0 +1,26 @@
+#!/usr/bin/env sh
+set -eu
+
+ROOT="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
+MAVEN_VERSION="3.9.11"
+MAVEN_HOME="$ROOT/.local/tools/apache-maven-$MAVEN_VERSION"
+MAVEN_CMD="$MAVEN_HOME/bin/mvn"
+ZIP="$ROOT/.local/downloads/apache-maven-$MAVEN_VERSION-bin.zip"
+URL="https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/$MAVEN_VERSION/apache-maven-$MAVEN_VERSION-bin.zip"
+
+if [ ! -x "$MAVEN_CMD" ]; then
+  mkdir -p "$ROOT/.local/tools" "$ROOT/.local/downloads"
+  echo "[mvnw] Preparando Maven $MAVEN_VERSION en .local..."
+  if command -v curl >/dev/null 2>&1; then
+    curl -fL "$URL" -o "$ZIP"
+  else
+    wget -O "$ZIP" "$URL"
+  fi
+  python3 - "$ZIP" "$ROOT/.local/tools" <<'PY'
+import sys, zipfile
+with zipfile.ZipFile(sys.argv[1]) as z:
+    z.extractall(sys.argv[2])
+PY
+fi
+
+exec "$MAVEN_CMD" "$@"

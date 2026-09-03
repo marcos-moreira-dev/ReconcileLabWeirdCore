@@ -1,0 +1,5 @@
+name=Varias combinaciones compatibles
+description=Distintos grupos de movimientos pueden explicar el mismo total.
+target=10000
+objective=all
+values=2000,3000,4000,5000,7000

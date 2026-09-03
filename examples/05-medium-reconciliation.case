@@ -1,0 +1,5 @@
+name=Conciliacion mediana
+description=Ejercicio bancario de tamano intermedio para observar el crecimiento del espacio de busqueda.
+target=42850
+objective=first
+values=1500,2200,3750,4100,5800,6400,7250,8300,9600,10450,11700,12300,13850,14900

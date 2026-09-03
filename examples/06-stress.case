@@ -1,0 +1,5 @@
+name=Caso de estres
+description=Caso grande para probar limites visuales, muestreo y el modo de ejecucion Maximo.
+target=50000
+objective=all
+values=500,700,900,1100,1300,1700,1900,2300,2700,3100,3600,4200,4800,5500,6300,7200,8100,9300,10500,11800

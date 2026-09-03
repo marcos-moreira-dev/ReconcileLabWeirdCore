@@ -1,0 +1,518 @@
+.root {
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 12px;
+    -fx-base: #f3f2ed;
+    -fx-background-color: #f3f2ed;
+}
+
+.menu-bar,
+.tool-bar,
+.control-strip,
+.status-strip {
+    -fx-background-color: #f0efe9;
+    -fx-border-color: transparent transparent #c5c7c8 transparent;
+}
+
+.menu-bar {
+    -fx-padding: 1 4 1 4;
+}
+
+.tool-bar {
+    -fx-padding: 6 8 6 8;
+    -fx-spacing: 5;
+}
+
+.control-strip {
+    -fx-background-color: #e9edf1;
+    -fx-border-color: transparent transparent #b9c2ca transparent;
+}
+
+.status-strip {
+    -fx-background-color: #e8edf2;
+    -fx-border-color: #b9c2ca transparent transparent transparent;
+}
+
+.side-pane {
+    -fx-background-color: #ecebe4;
+    -fx-border-color: #c6c8c8;
+}
+
+.titled-pane {
+    -fx-text-fill: white;
+}
+
+.titled-pane > .title {
+    -fx-background-color: #4a6076;
+    -fx-border-color: #35495d;
+    -fx-padding: 7 9 7 9;
+}
+
+.titled-pane > .title:hover {
+    -fx-background-color: #3e566e;
+}
+
+.titled-pane > .title > .text {
+    -fx-fill: white;
+    -fx-font-weight: bold;
+}
+
+.titled-pane > .title > .arrow-button .arrow {
+    -fx-background-color: white;
+}
+
+.titled-pane > *.content {
+    -fx-background-color: #fafaf7;
+    -fx-border-color: #aeb8c1;
+}
+
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #aeb8c1;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #31485e;
+}
+
+.table-view .column-header,
+.table-view .filler {
+    -fx-background-color: #31485e;
+    -fx-border-color: #465c70;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #eaf1f6;
+}
+
+.table-row-cell:even {
+    -fx-background-color: #ffffff;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #c8dcef;
+    -fx-text-background-color: #182c3d;
+}
+
+.list-view {
+    -fx-background-color: white;
+    -fx-border-color: #b6bec5;
+}
+
+.list-cell {
+    -fx-padding: 7 9 7 9;
+}
+
+.list-cell:zebra {
+    -fx-background-color: #eef0ef;
+}
+
+.list-cell:selected {
+    -fx-background-color: #2f72c4;
+    -fx-text-fill: white;
+}
+
+.search-workspace,
+.search-viewport {
+    -fx-background-color: #3f4650;
+}
+
+.search-workspace {
+    -fx-border-color: #aeb7c0;
+}
+
+.zoom-rail {
+    -fx-background-color: #e5e9ed;
+    -fx-border-color: #a8b2bc;
+    -fx-padding: 9 6 9 6;
+}
+
+.zoom-button {
+    -fx-min-width: 32px;
+    -fx-pref-width: 32px;
+    -fx-max-width: 32px;
+    -fx-font-weight: bold;
+}
+
+.zoom-percent {
+    -fx-font-size: 11px;
+    -fx-text-fill: #263746;
+}
+
+.inspector-scroll {
+    -fx-background-color: #e8e8e2;
+    -fx-border-color: #aeb8c1;
+}
+
+.inspector-scroll > .viewport {
+    -fx-background-color: #e8e8e2;
+}
+
+.scroll-bar:vertical,
+.scroll-bar:horizontal {
+    -fx-background-color: #d8dde2;
+}
+
+.scroll-bar .track {
+    -fx-background-color: #d8dde2;
+    -fx-border-color: #b8c0c7;
+    -fx-background-insets: 0;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #8498aa;
+    -fx-background-insets: 2;
+    -fx-background-radius: 4px;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: #6f879b;
+}
+
+.scroll-bar .thumb:pressed {
+    -fx-background-color: #5d768d;
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-background-color: #c5cdd4;
+    -fx-border-color: #a8b2bc;
+}
+
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow {
+    -fx-background-color: #465b6e;
+}
+
+.progress-bar {
+    -fx-pref-height: 14px;
+}
+
+.progress-bar > .track {
+    -fx-background-color: white;
+    -fx-border-color: #8f9daa;
+}
+
+.progress-bar > .bar {
+    -fx-background-color: #4aa264;
+    -fx-background-insets: 2;
+}
+
+.text-area,
+.text-field,
+.choice-box,
+.spinner {
+    -fx-border-color: #b4bdc5;
+}
+
+.text-area {
+    -fx-background-color: white;
+}
+
+.case-title {
+    -fx-font-weight: bold;
+    -fx-text-fill: #26394d;
+}
+
+.animated-progress {
+    -fx-padding: 2 0 0 0;
+}
+
+.animated-progress .label {
+    -fx-text-fill: #2b2b2b;
+}
+
+.animated-progress .progress-bar {
+    -fx-pref-height: 14px;
+    -fx-max-width: Infinity;
+}
+
+.button {
+    -fx-background-radius: 3px;
+    -fx-border-radius: 3px;
+    -fx-padding: 5 10 5 10;
+}
+
+.button.action-primary {
+    -fx-background-color: #426b91;
+    -fx-text-fill: white;
+    -fx-border-color: #345778;
+}
+
+.button.action-primary:hover {
+    -fx-background-color: #355e84;
+}
+
+.button.action-accent {
+    -fx-background-color: #dfe8f0;
+    -fx-border-color: #9eafbe;
+}
+
+.choice-box,
+.spinner,
+.text-field {
+    -fx-background-radius: 3px;
+}
+
+.scroll-pane > .viewport {
+    -fx-background-insets: 0;
+}
+
+.dialog-pane {
+    -fx-background-color: #f6f5ef;
+}
+
+.dialog-pane .header-panel {
+    -fx-background-color: #e4eaf0;
+}
+
+.field-help {
+    -fx-text-fill: #62676c;
+    -fx-font-size: 11px;
+}
+
+.domain-note {
+    -fx-background-color: #e8f0f6;
+    -fx-border-color: #bdcbd6;
+    -fx-padding: 8;
+    -fx-text-fill: #34404a;
+}
+
+
+/* -------------------------------------------------------------------------
+   Pulido Windows 11 v0.6: sobrio, tradicional, con acentos de color.
+   Estas reglas aparecen al final para prevalecer sobre la base anterior.
+   ------------------------------------------------------------------------- */
+
+.command-toolbar {
+    -fx-background-color: #f6f8fa;
+    -fx-border-color: transparent transparent #b8c3cc transparent;
+    -fx-padding: 7 9 7 9;
+}
+
+.command-toolbar .separator:vertical {
+    -fx-padding: 2 4 2 4;
+}
+
+.toolbar-command {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #aab7c2;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 6 11 6 9;
+    -fx-text-fill: #263b4d;
+}
+
+.toolbar-command:hover {
+    -fx-background-color: #edf4fa;
+    -fx-border-color: #7797b2;
+}
+
+.toolbar-command:pressed {
+    -fx-background-color: #dce9f3;
+}
+
+.toolbar-command:disabled {
+    -fx-opacity: 0.46;
+}
+
+.toolbar-command.action-primary {
+    -fx-background-color: #365f86;
+    -fx-border-color: #2b4e70;
+    -fx-text-fill: white;
+}
+
+.toolbar-command.action-primary:hover {
+    -fx-background-color: #2f577d;
+    -fx-border-color: #244765;
+}
+
+.toolbar-command.action-accent {
+    -fx-background-color: #eef3f8;
+    -fx-border-color: #91a7ba;
+}
+
+.control-strip {
+    -fx-background-color: #e8eef3;
+    -fx-border-color: transparent transparent #aebdca transparent;
+    -fx-padding: 8 10 8 10;
+}
+
+.control-strip-label {
+    -fx-text-fill: #334b5e;
+}
+
+.control-strip .choice-box,
+.control-strip .spinner,
+.control-strip .text-field {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #a8b7c3;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+}
+
+.control-strip .choice-box:hover,
+.control-strip .spinner:hover {
+    -fx-border-color: #6f91ac;
+}
+
+.control-strip .choice-box:focused,
+.control-strip .spinner:focused {
+    -fx-border-color: #4e7fa7;
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(68, 120, 161, 0.18),
+            4,
+            0.2,
+            0,
+            0);
+}
+
+.control-strip .choice-box .open-button {
+    -fx-background-color: #e6edf3;
+    -fx-border-color: transparent transparent transparent #c3ced7;
+}
+
+.control-strip .spinner .increment-arrow-button,
+.control-strip .spinner .decrement-arrow-button {
+    -fx-background-color: #e6edf3;
+    -fx-border-color: #c3ced7;
+}
+
+.zoom-button {
+    -fx-min-width: 38px;
+    -fx-pref-width: 38px;
+    -fx-max-width: 38px;
+    -fx-min-height: 34px;
+    -fx-pref-height: 34px;
+    -fx-background-color: #f8fbfd;
+    -fx-border-color: #9eafbc;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 5;
+}
+
+.zoom-button:hover {
+    -fx-background-color: #e5f0f8;
+    -fx-border-color: #648baa;
+}
+
+.zoom-button:pressed {
+    -fx-background-color: #d7e7f2;
+}
+
+.zoom-rail .slider .track {
+    -fx-background-color: #bdc9d3;
+}
+
+.zoom-rail .slider .thumb {
+    -fx-background-color: #4d789c;
+    -fx-border-color: #365d7d;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+}
+
+.timeline-pane > .title {
+    -fx-background-color: #435b72;
+}
+
+.timeline-pane > .title:hover {
+    -fx-background-color: #384f66;
+}
+
+
+/* Docking real del timeline: el divisor es deliberadamente visible. */
+.workspace-vertical-split {
+    -fx-background-color: #d6dde3;
+    -fx-padding: 0;
+}
+
+.workspace-vertical-split > .split-pane-divider {
+    -fx-background-color: #91a5b6;
+    -fx-padding: 2 0 2 0;
+}
+
+.workspace-vertical-split > .split-pane-divider:hover {
+    -fx-background-color: #6f8ca3;
+}
+
+.timeline-pane {
+    -fx-min-height: 36px;
+}
+
+
+/* -------------------------------------------------------------------------
+   v0.7 — Zoom como HUD flotante y timeline con dock explícito.
+   ------------------------------------------------------------------------- */
+
+.zoom-overlay {
+    -fx-background-color: rgba(239, 245, 250, 0.94);
+    -fx-border-color: rgba(117, 140, 160, 0.95);
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 9 7 8 7;
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0, 0, 0, 0.24),
+            12,
+            0.15,
+            0,
+            3);
+}
+
+.zoom-overlay .slider .track {
+    -fx-background-color: #afbdc9;
+}
+
+.zoom-overlay .slider .thumb {
+    -fx-background-color: #477da8;
+    -fx-border-color: #315f84;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+}
+
+.zoom-overlay .zoom-percent {
+    -fx-text-fill: #294257;
+    -fx-font-weight: bold;
+}
+
+.timeline-dock {
+    -fx-background-color: #f7f8f9;
+    -fx-border-color: #627b90 transparent transparent transparent;
+}
+
+.timeline-dock-header {
+    -fx-background-color: #405b73;
+    -fx-border-color: #314a60;
+    -fx-padding: 0 10 0 10;
+}
+
+.timeline-dock-header:hover {
+    -fx-background-color: #37536b;
+}
+
+.timeline-dock-arrow,
+.timeline-dock-title {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.timeline-dock .table-view {
+    -fx-border-color: transparent #aeb8c1 #aeb8c1 #aeb8c1;
+}
+
+.workspace-vertical-split > .split-pane-divider {
+    -fx-background-color: #8097aa;
+    -fx-padding: 2 0 2 0;
+}
+
+.workspace-vertical-split > .split-pane-divider:hover {
+    -fx-background-color: #607f98;
+}
+
+

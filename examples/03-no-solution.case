@@ -1,0 +1,5 @@
+name=Sin combinacion compatible
+description=Sirve para observar una busqueda completa que no logra conciliar el monto.
+target=9999
+objective=all
+values=1250,2100,3350,4800,5200
